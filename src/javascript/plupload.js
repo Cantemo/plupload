@@ -1654,6 +1654,11 @@
 		 * @see plupload
 		 */
 		self.status = 0;
+
+		/**
+		 * job ID assigned from Vidispine
+		 */
+		self.jobId = '';
 	};
 
 	/**
@@ -1753,6 +1758,8 @@
 		 */
 		self.bytesPerSec = 0;
 
+		self.jobId = '';
+
 		/**
 		 * Resets the progress to it's initial values.
 		 *
@@ -1760,6 +1767,7 @@
 		 */
 		self.reset = function() {
 			self.size = self.loaded = self.uploaded = self.failed = self.queued = self.percent = self.bytesPerSec = 0;
+			self.jobId = '';
 		};
 	};
 
